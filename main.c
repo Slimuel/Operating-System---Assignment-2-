@@ -17,6 +17,10 @@ Banker algorithm borrowed and modified from GeeksForGeeks website
 #define LINE_SIZE 256
 #define NUM_OF_PROCESSES 5
 
+#define AVAIL_RESOURCE_A 3
+#define AVAIL_RESOURCE_B 3
+#define AVAIL_RESOURCE_C 2
+
 //// STRUCTURES ////
 /// Customer structure ///
 typedef struct customer
@@ -30,7 +34,9 @@ typedef struct customer
 int main() {
     /// Varialbles ///
     customer list[NUM_OF_PROCESSES]; // initial customer list
-    int avail[3] = {3, 3, 2}; // available resources
+    int avail[3] = {AVAIL_RESOURCE_A, 
+                    AVAIL_RESOURCE_B, 
+                    AVAIL_RESOURCE_C}; // available resources
 
     bool checkForUnsafe[NUM_OF_PROCESSES];
     int orderedList[NUM_OF_PROCESSES]; // final order of customers
@@ -86,7 +92,7 @@ int main() {
         if (checkForUnsafe[i] == false)
         {
             flag = false; 
-            printf("The following system is not safe.");
+            printf("The following system is not safe.\n");
             break;
         }
     }
