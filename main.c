@@ -14,7 +14,6 @@ Banker algorithm borrowed and modified from GeeksForGeeks website
 
 //// CONSTANTS ////
 #define NUM_OF_RESOURCES 3
-#define LINE_SIZE 256
 #define NUM_OF_PROCESSES 5
 
 #define AVAIL_RESOURCE_A 3
